@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif, Helvetica;
+}
+section
+{
+    width: 100%;
+}
+.menu {
+    height: 100vh;
+    width: 100%;
+    background-image: url("imagens/london.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.head {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-inline: 15px;
+    /*Fixar o head*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 66px;
+    /* Substitua pelo valor da altura do seu cabeçalho */
+    background-color: #fff;
+    /* Substitua pela cor de fundo do seu cabeçalho */
+    z-index: 1;
+    /* Garante que o cabeçalho fique acima dos outros elementos */
+}
+
+.logo_name {
+    font-size: 20pt;
+    padding-left: 12px;
+}
+
+.large.material-icons {
+    font-size: 38px;
+    /* Substitua pelo tamanho desejado */
+    width: 50px;
+    /* Substitua pelo tamanho desejado */
+}
+
+.head-local span {
+    font-size: 30px;
+    /* Substitua pelo tamanho desejado */
+    width: 30px;
+    /* Substitua pelo tamanho desejado */
+}
+
+.head-local {
+    display: flex;
+    align-items: center;
+    color: rgb(253, 83, 83);
+}
+
+.head-local div {
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.search {
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.search input {
+    width: 0;
+    background-color: rgb(238, 238, 238);
+    opacity: 0;
+    transition: .4s;
+    font-size: 14pt;
+    border: solid 1px #dadada;
+    padding-left: 16px;
+}
+.search:hover input{
+    width: 400px;
+    display: block;
+    opacity: 1;
+}
+
+/*Formulário*/
+.menu .formulario {
+    background-color: rgb(255, 255, 255);
+    width: calc(66%);
+    width: max(77%, 630px);
+    height: 320px;
+    max-width: 1120px;
+    margin: auto;
+}
+
+.imagens-coluna {
+    display: none;
+}
+
+main {
+    background-color: #e6e6e6;
+}
+
+@media (max-width: 650px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .search:hover input{
+        width: 220px;
+        display: block;
+        opacity: 1;
+    }
+    .menu .formulario {
+        margin-top: 66px;
+        width: 100%;
+        height: 400px;
+    }
+
+    .menu {
+        width: 100%;
+        height: 400px;
+    }
+
+    .menu .formulario .inputs {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu .formulario .inputs .input {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    #button {
+        width: 50%;
+    }
+
+    .menu .formulario nav {
+        width: 100%;
+    }
+
+    /*Tratamento das imagens.
+    Desativando o container das 4 imagens e ativando o 
+    container com lista de imagens*/
+    #imagens-ofertas {
+        display: none;
+    }
+
+    .imagens-coluna {
+        display: block;
+    }
+
+    main .ofertas {
+        position: relative;
+        margin-top: 100px;
+    }
+
+    .imagens-coluna ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .imagens-coluna li {
+        flex: 1 0 25%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-inline: 20px;
+        margin-bottom: 20px;
+    }
+
+    .imagens-coluna img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /*Ultimas imagens*/
+    .containers-imagens {
+        flex-direction: column;
+    }
+    subscribe{
+        margin-top: 140px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex: 1;
+    }
+}
+@media (max-width: 450px){
+    .search:hover input{
+        display: block;
+        width: 120px;
+        opacity: 1;
+    }
+}
+@media (max-width: 330px){
+    .search:hover input{
+        width: 90px;
+        display: block;
+        opacity: 1;
+    }
+}
+@media (min-width: 651px) and (max-width: 768px) {
+    .menu .formulario {
+        width: max(90%, 300px);
+    }
+}
+
+.menu nav ul {
+    display: flex;
+    align-items: center;
+}
+
+#flight {
+    background-color: rgb(255, 25, 25);
+}
+
+#fli {
+    rotate: 45deg;
+}
+
+.menu nav ul li {
+    list-style: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    /*Distancia entre o icone e a palavra*/
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+
+}
+
+
+/*Menu inputs*/
+.inputs {
+    padding: 20px;
+}
+
+.inputs h1 {
+    font-family: 'Poiret One', cursive, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 16px;
+}
+
+.inputs div {
+    display: flex;
+}
+
+.inputs div div {
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputs div .from {
+    margin-right: 20px;
+}
+
+.inputs div div h3 {
+    font-family: sans-serif;
+    font-weight: 200;
+    color: #555;
+}
+
+.inputs div div input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-family: sans-serif;
+    border-radius: #777 5px;
+    /*Cor para os 4 lados do input*/
+}
+
+.button-dates input {
+    background-color: #666;
+    padding: 10px;
+    padding-inline: 16px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 10px;
+    width: 30%;
+}
+
+/*Ofertas e imagens*/
+.nature div {
+    background-color: rgb(255, 255, 255);
+}
+
+main .ofertas {
+    display: flex;
+    flex-wrap: in;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    /*align-items: flex-start;*/
+    width: 100%;
+
+}
+
+.info-ofertas,
+.imagens,
+.ofertas {
+    background-color: #ffffff;
+}
+
+.info-ofertas {
+    font-family: sans-serif;
+    color: #333;
+    position: relative;
+    top: 12px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info-ofertas h1 {
+    padding-top: 40px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: 'Poiret One', cursive, sans-serif;
+    padding-bottom: 12px;
+}
+
+.info-ofertas h2 {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    font-size: 14pt;
+    font-weight: 800;
+}
+
+.ofertas .imagens {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.ofertas .imagens .img1 {
+    width: 50%;
+    height: 100%;
+
+}
+
+.ofertas .imagens .img1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.ofertas .imagens .box-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.exemplo1 {
+    margin-right: 15px;
+    margin-bottom: 0px;
+}
+
+.ofertas .imagens .box-images>div {
+    width: 50%;
+
+}
+
+.ofertas .imagens .box-images img {
+    width: 100%;
+    gap: 15px;
+
+}
+
+.acima
+
+/*para aplicar a margem só na imagem de cima da coluna*/
+    {
+    margin-bottom: 7px;
+}
+
+.baixo
+
+/*aplicar a margin para a imagem de baixo descer mais um pouco*/
+    {
+    margin-top: 4px;
+}
+
+/*Fim do ofertas e imagens*/
+
+/*Segunda setiction de imagens*/
+.nature {
+    margin-top: 60px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nature div {
+    margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.nature .sobre {
+
+    background-color: #fff;
+}
+
+.nature .sobre h1 {
+    font-family: sans-serif;
+    font-weight: 200;
+    color: #444;
+    margin-top: 40px;
+    padding-top: 32px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.nature .sobre>h2 {
+    font-family: 'Poiret One', cursive, sans-serif;
+    color: #3a3a3a;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    font-size: 14pt;
+    font-weight: 800;
+}
+
+.nature div div {
+    width: 100%;
+}
+
+/*Ultimas imagens*/
+.containers-imagens {
+    display: flex;
+    gap: 15px;
+}
+
+.bloco {
+    flex-direction: column;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.bloco h1,
+h2,
+h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+#span,
+#span2 {
+    position: relative;
+    margin-left: 40px;
+    padding-bottom: 20px;
+    width: 140px;
+    font-family: sans-serif;
+    color: #444;
+}
+
+.bloco h1 {
+    font-family: 'Poiret One', cursive, sans-serif;
+    color: #111;
+}
+
+.bloco h3 {
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #707070;
+}
+
+.bloco h2 {
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #363636;
+    font-size: 14pt;
+}
+main{
+    background-color: rgb(236, 236, 236);
+}
+
+/*Subscribe section*/
+.subscribe
+{
+    height: auto;
+}
+.subscribe > div
+{
+    background-color: #575757;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 50px;
+    padding: 20px;
+}
+.subscribe div div
+{
+    color: #e6e6e6;
+    font-family: Arial, Helvetica, sans-serif, cursive, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 13pt;
+}
+.subscribe h1
+{
+    font-weight: 100;
+    font-size: 25pt;
+}
+.subscribe input
+{
+    width: 100%;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+.subscribe button
+{
+    padding: 13px;
+    padding-inline: 20px;
+    font-size: 14pt;
+    background-color: rgb(255, 130, 130);
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.contato
+{
+    margin-top: 50px;
+    width: 100%;
+}
+.contato div
+{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    background-color: #e9e9e9;
+}
+.contato div div
+{
+    margin: 0;
+    padding: 0;
+}
+.contato h1,
+.contato p
+{
+    margin-bottom: 15px;
+}
+.contato h1
+{
+    font-size: 25pt;
+    font-weight: 500;
+}
+.contato p
+{
+    font-size: 13pt;
+}
+.contato .icones_contato div
+{
+    margin-top: 10px;
+}
+.contato .icones_contato div img
+{
+    width: 16px;
+    margin-right: 16px;
+    position: relative;
+    top: 1px;
+}
+.contato .icones_contato div a
+{
+    text-decoration: none;
+    color: #222;
+}
+.contato .inputs
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+.contato .inputs input
+{
+    margin-top: 10px;
+    height: 45px;
+    border: solid 1px #b4b4b4;
+    padding-left: 15px;
+}
+.contato button
+{
+    margin-top: 15px;
+    width: 200px;
+    height: 45px;
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12pt;
+    text-transform: uppercase;
+}
+footer {
+    width: 100%;
+    background-color: #e9e9e9;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer .rodape
+{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
+}
+footer .rodape div
+{
+   margin: 10px;
+}
+footer .rodape .links_sociais img
+{
+    width: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+footer .rodape .links_sociais
+{
+    display: flex;
+    flex-wrap: wrap;
+}
